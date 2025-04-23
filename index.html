@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dcreative web undangan</title>
+  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+    <style>
+      /* Global style */
+html, body {
+  padding-top: 110px;
+}
+
+.home{
+  margin-top: -150px;
+  padding-bottom: 3rem;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1020;
+
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Desktop ≥992px */
+@media (min-width: 992px) {
+  .nav-link.active {
+    background-color: rgb(59, 95, 241);
+    color: aliceblue !important;
+    border-radius: 5px;
+    padding: 4px 5px;
+  }
+
+  .nav-link:hover {
+    color: rgb(21, 255, 0);
+  }
+
+  .nav-link{
+    color: rgb(0, 0, 0);
+  }
+
+  .home {
+    background-color:  #16E2F5;
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .logo-box img {
+    max-width: 450px;
+    border-radius: 10px;
+  }
+
+  .text-box {
+    max-width: 600px;
+    text-align: left;
+    margin: 0 auto;
+
+  }
+
+  .text-box h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
+  }
+
+  .text-box p {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+
+  .text-box .cta-button{
+    display: inline-block;
+    margin-top: 2rem;
+  }
+
+  .cta-button:hover {
+    background-color: #333;
+  }
+
+  /* Keunggulan */
+  .keunggulan {
+    background-color: #f8f9fa; /* Warna abu Bootstrap */
+  }
+
+  .fitur-box i {
+    transition: transform 0.3s ease;
+  }
+
+  .fitur-box:hover i {
+    transform: scale(1.1);
+  }
+
+  /* Fitur Lengkap */
+  .fitur-lengkap {
+    padding-top: 3rem; /* Sesuaikan jarak atas */
+    padding-bottom: 3rem; /* Sesuaikan jarak bawah */
+  }
+
+  .fitur-lengkap .container {
+    max-width: 960px; /* Atau nilai lain yang Anda inginkan */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px; /* Mengikuti standar padding container Bootstrap */
+    padding-right: 15px; /* Mengikuti standar padding container Bootstrap */
+  }
+
+  .fitur-lengkap .row {
+    margin-left: -15px; /* Kompensasi padding container Bootstrap */
+    margin-right: -15px; /* Kompensasi padding container Bootstrap */
+  }
+
+  .fitur-lengkap .col {
+    padding-left: 15px; /* Mengikuti standar padding kolom Bootstrap */
+    padding-right: 15px; /* Mengikuti standar padding kolom Bootstrap */
+    margin-bottom: 1.5rem; /* Jarak antar kotak fitur */
+  }
+
+  /* Memusatkan baris terakhir yang mungkin tidak penuh */
+  .fitur-lengkap .row:last-child {
+    display: flex;
+    justify-content: center; /* Memusatkan item horizontal */
+    width: 100%; /* Memastikan row mengambil lebar penuh container */
+  }
+
+  .fitur-lengkap .row:last-child .col {
+    max-width: 300px; /* Lebar maksimum setiap kotak fitur di baris terakhir */
+    flex-basis: auto; /* Biarkan lebar menyesuaikan konten atau max-width */
+  }
+
+  /* Jika hanya ada satu item di baris terakhir, pusatkan juga */
+  .fitur-lengkap .row:last-child .col:only-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Tranding Theme */
+  .container.my-5 { /* Targetkan container dengan class my-5 */
+    background-color: #f8f9fa; /* Contoh warna background abu muda, sesuaikan dengan keinginan Anda */
+    padding-top: 2rem; /* Tambahkan sedikit padding atas agar konten tidak terlalu rapat ke tepi */
+    padding-bottom: 2rem; /* Tambahkan sedikit padding bawah */
+    border-radius: 8px; /* Tambahkan sedikit sudut melengkung jika diinginkan */
+    margin-top: 3rem !important; /* Berikan margin atas yang lebih besar agar tidak terlalu dekat dengan section sebelumnya */
+    margin-bottom: 3rem !important; /* Berikan margin bawah */
+  }
+  .bg-trending-theme {
+    background-color: #f8f9fa; /* Contoh warna background */
+  }
+  .bg-trending-theme .card {
+    max-width: 250px; /* Sesuaikan lebar maksimal card */
+    margin-left: auto;
+    margin-right: auto; /* Membuat card berada di tengah kolomnya */
+  }
+
+  .bg-trending-theme .col {
+    display: flex;
+    justify-content: center; /* Memusatkan card di dalam kolom */
+  }
+
+
+}
+
+
+
+/* Tablet 768px - 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home {
+    background-color:  #16E2F5;
+    padding: 3rem 1rem;
+  }
+
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-box img {
+    max-width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .text-box h1 {
+    font-size: 2rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    margin-top: 1rem;
+  }
+
+  .navbar .container {
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 92px;
+    right: -100%;
+    width: 45%;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, 0.3);
+    padding: 1rem 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+  }
+
+  .navbar-toggler {
+    z-index: 1000;
+  }
+
+  .navbar-toggler-icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  .nav-link{
+    color: white !important;
+    font-size: 1.5rem;
+  }
+
+  .nav-link:hover {
+    color: rgb(73, 0, 243);
+  }
+
+  .navbar-nav .nav-link.active {
+    color: chocolate !important;
+  }
+  .cta-button {
+    padding: 0.5em;
+    background-color: #252525;
+    color: #fff;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background-color: #333;
+  }
+
+  /* Fitur Lengkap */
+  .fitur-lengkap .container {
+    max-width: 900px !important; /* Kita coba lebar yang lebih lebar sedikit */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Atur tata letak baris agar item berada di tengah */
+  .fitur-lengkap .row {
+    display: flex !important;
+    justify-content: center !important; /* Pusatkan item horizontal */
+    flex-wrap: wrap !important; /* Biarkan item pindah ke baris baru jika tidak cukup ruang */
+    width: 100% !important;
+  }
+
+  .fitur-lengkap .col {
+    flex: 0 0 auto !important; /* Jangan tumbuh atau menyusut secara fleksibel */
+    width: calc(50% - 30px) !important; /* Ambil setengah lebar dengan sedikit jarak */
+    margin-bottom: 1.5rem !important;
+    max-width: none !important; /* Hilangkan max-width dari aturan desktop */
+  }
+
+  /* Untuk baris terakhir (jika hanya 2 item), pastikan tetap di tengah */
+  .fitur-lengkap .row:last-child {
+    justify-content: center !important;
+  }
+
+  .fitur-lengkap .row:last-child .col {
+    width: calc(50% - 30px) !important; /* Tetap setengah lebar */
+    max-width: none !important;
+  }
+} 
+
+/* Mobile <768px */
+@media (max-width: 767.98px) {
+  .home {
+    background-color: #16E2F5;
+    padding: 3rem 1rem;
+  }
+  .navbar-collapse {
+    position: fixed;
+    top: 75px;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, 0.2);
+    padding: 0.1rem 1rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+  .navbar-collapse.show {
+    right: 0;
+  }
+  .navbar-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .nav-link{
+    color: white !important;
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand span,
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-box img {
+    max-width: 85%;
+    margin-bottom: 1rem;
+  }
+
+  .text-box h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  .text-box p {
+    font-size: 0.95rem;
+  }
+
+  .nav-link {
+    color: #fff;
+  }
+
+  .nav-link:hover {
+    color: rgb(73, 0, 243);
+  }
+
+  .navbar-nav .nav-link.active {
+    color: rgb(220, 92, 0) !important;
+  }
+
+  .cta-button {
+    padding: 0.5em;
+    background-color: #252525;
+    color: #fff;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background-color: #333;
+  }
+
+  /* wwww */
+  .fitur-box {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column; /* Mengubah arah flex menjadi kolom (vertikal) */
+    align-items: flex-start; /* Membuat ikon dan teks rata kiri */
+    gap: 0.5rem; /* Mengurangi jarak antar item menjadi 0.5rem */
+  }
+
+  .fitur-box i {
+    margin-bottom: 0.5rem !important; /* Memberikan sedikit margin bawah pada ikon */
+    margin-right: 0 !important; /* Menghapus margin kanan pada ikon */
+    font-size: 2rem !important;
+  }
+
+  .fitur-box h5 {
+    margin-bottom: 0.25rem !important;
+    font-size: 1.1rem !important; /* Sedikit menyesuaikan ukuran font h5 */
+  }
+
+  .fitur-box p {
+    margin-bottom: 0 !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Fitur Lengkap */
+  .fitur-lengkap .container{
+    padding-left: 1.8rem !important;
+    padding-right: 1.8rem !important;
+  }
+
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <!-- Logo dan Brand -->
+        <a class="navbar-brand d-flex align-items-center fw-bold m-0" >
+          <img src="asset/images/l.jpg" alt="Logo" width="50" height="50" class="me-2 m">
+          dcreative&nbsp; <span class="text-primary">web undangan</span>
+        </a>
+  
+        <!-- Toggle Hamburger -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#tema">Tema</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tema">Portofolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tema">Music</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- tampilan home -->
+    <section class="home">
+      <div class="container">
+        <div class="home-content">
+          <div class="logo-box">
+            <img src="asset/images/l.jpg" alt="Logo" class="logo" />
+          </div>
+          <div class="text-box">
+            <h1>Undangan Digital Untukmu</h1>
+            <p>Merencanakan pernikahan, ulang tahun, syukuran, dan acara lainnya bisa menjadi pengalaman yang menyenangkan sekaligus menegangkan.</p>
+            <a href="#kontak" class="cta-button">Hubungi Kami →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Keunggulan -->
+    <section class="keunggulan py-5">
+      <div class="container text-center">
+        <h2 class="mb-4 fw-bold">Kenapa Harus Menggunakan Undangan Digital?</h2>
+        <p class="mb-5 text-muted">Hemat Biaya, Waktu, dan Tenaga • Lebih Praktis dan Efisien • Bisa diakses kapan saja dan dimana saja • Ramah Lingkungan • Fitur melimpah</p>
+    
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="fitur-box p-4 shadow-sm rounded bg-white h-100">
+              <i class="bi bi-palette-fill fs-1 text-primary mb-3"></i>
+              <h5>Beragam Pilihan Tema</h5>
+              <p class="text-muted">Pilih tema favorit dari puluhan pilihan dan bisa kamu custom sesuka hati. Background? Font? Bisa!</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fitur-box p-4 shadow-sm rounded bg-white h-100">
+              <i class="bi bi-pencil-square fs-1 text-success mb-3"></i>
+              <h5>Custom Nama Tamu</h5>
+              <p class="text-muted">Undangan bisa menampilkan nama tamu langsung, jadi terasa lebih personal dan eksklusif.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fitur-box p-4 shadow-sm rounded bg-white h-100">
+              <i class="bi bi-check2-circle fs-1 text-warning mb-3"></i>
+              <h5>Konfirmasi Kehadiran</h5>
+              <p class="text-muted">Tahu siapa yang hadir? Bisa! Bikin persiapan konsumsi jadi lebih hemat dan efisien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fitur Lengkap -->
+    <section class="fitur-lengkap py-5">
+      <div class="container text-center">
+        <h2 class="mb-4 fw-bold">Fitur Lengkap</h2>
+        <p class="mb-5 text-muted">Undangan Digital Dengan Fitur yang Lengkap hanya disini</p>
+    
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-person-vcard fs-2 text-primary mb-2"></i>
+              <h6 class="fw-bold">Custom Nama Tamu</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-music-note-beamed fs-2 text-success mb-2"></i>
+              <h6 class="fw-bold">Custom Music Latar</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-envelope-check-fill fs-2 text-warning mb-2"></i>
+              <h6 class="fw-bold">RSVP & Ucapan</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-wallet-fill fs-2 text-info mb-2"></i>
+              <h6 class="fw-bold">Amplop Digital</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-clock-fill fs-2 text-danger mb-2"></i>
+              <h6 class="fw-bold">Count Down Timer</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-images fs-2 text-secondary mb-2"></i>
+              <h6 class="fw-bold">Galeri Foto & Video</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-map-fill fs-2 text-primary mb-2"></i>
+              <h6 class="fw-bold">Integrasi Google Maps</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-play-btn-fill fs-2 text-success mb-2"></i>
+              <h6 class="fw-bold">Info Live Streaming</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-qr-code-scan fs-2 text-warning mb-2"></i>
+              <h6 class="fw-bold">QR Code Checkin Acara</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fitur-item p-3 rounded shadow-sm bg-light">
+              <i class="bi bi-wifi fs-2 text-info mb-2"></i>
+              <h6 class="fw-bold">Layar Sapa Real Time</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Trennding Theme -->
+    <div class="bg-trending-theme py-5">
+       <div class="container mt-3 mb-5">
+          <h4 class="text-center fw-bold mb-2">Trending Theme!</h4>
+          <p class="text-center text-muted mb-4">Pilih Tema Undangan Digitalmu Disini!</p>
+  
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
+          <div class="col">
+              <div class="card h-100">
+                  <img src="asset/images/logo.png" class="card-img-top" alt="Maroon Art">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Maroon Art</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col">
+              <div class="card h-100">
+                  <img src="asset/images/logo.png" class="card-img-top" alt="Rounded Luxurious">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Rounded Luxurious</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col">
+              <div class="card h-100">
+                  <img src="asset/images/logo.png" class="card-img-top" alt="Blue Casanova">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Blue Casanova</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col">
+              <div class="card h-100">
+                  <img src="asset/images/logo.png" class="card-img-top" alt="Aysha">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Aysha</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card h-100">
+                  <img src="asset/images/logo.png" class="card-img-top" alt="Aysha">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Aysha</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card h-100">
+                  <img src="https://via.placeholder.com/200x250?text=Aysha" class="card-img-top" alt="Aysha">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Aysha</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card h-100">
+                  <img src="https://via.placeholder.com/200x250?text=Aysha" class="card-img-top" alt="Aysha">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Aysha</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card h-100">
+                  <img src="https://via.placeholder.com/200x250?text=Aysha" class="card-img-top" alt="Aysha">
+                  <div class="card-body text-center">
+                      <h6 class="card-title">Aysha</h6>
+                  </div>
+                  <div class="card-footer d-flex justify-content-center gap-2">
+                      <a href="#" class="btn btn-outline-secondary btn-sm">Preview</a>
+                      <a href="#" class="btn btn-warning btn-sm">Pesan</a>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+  
+    
+    
+    
+  
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+       // Saat link menu diklik
+       document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+          document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>
