@@ -1,6 +1,12 @@
-/* Global style */
+<style>
+      /* Global style */
 html, body {
-  padding-top: 700px;
+  padding-top: 110px;
+}
+
+.home{
+  margin-top: -150px;
+  padding-bottom: 3rem;
 }
 
 .navbar{
@@ -99,7 +105,92 @@ html, body {
   .cta-button:hover {
     background-color: #333;
   }
+
+  
+
+  /* Keunggulan */
+  .keunggulan {
+    background-color: #f8f9fa; /* Warna abu Bootstrap */
+  }
+
+  .fitur-box i {
+    transition: transform 0.3s ease;
+  }
+
+  .fitur-box:hover i {
+    transform: scale(1.1);
+  }
+
+  /* Fitur Lengkap */
+  .fitur-lengkap {
+    padding-top: 3rem; /* Sesuaikan jarak atas */
+    padding-bottom: 3rem; /* Sesuaikan jarak bawah */
+  }
+
+  .fitur-lengkap .container {
+    max-width: 960px; /* Atau nilai lain yang Anda inginkan */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px; /* Mengikuti standar padding container Bootstrap */
+    padding-right: 15px; /* Mengikuti standar padding container Bootstrap */
+  }
+
+  .fitur-lengkap .row {
+    margin-left: -15px; /* Kompensasi padding container Bootstrap */
+    margin-right: -15px; /* Kompensasi padding container Bootstrap */
+  }
+
+  .fitur-lengkap .col {
+    padding-left: 15px; /* Mengikuti standar padding kolom Bootstrap */
+    padding-right: 15px; /* Mengikuti standar padding kolom Bootstrap */
+    margin-bottom: 1.5rem; /* Jarak antar kotak fitur */
+  }
+
+  /* Memusatkan baris terakhir yang mungkin tidak penuh */
+  .fitur-lengkap .row:last-child {
+    display: flex;
+    justify-content: center; /* Memusatkan item horizontal */
+    width: 100%; /* Memastikan row mengambil lebar penuh container */
+  }
+
+  .fitur-lengkap .row:last-child .col {
+    max-width: 300px; /* Lebar maksimum setiap kotak fitur di baris terakhir */
+    flex-basis: auto; /* Biarkan lebar menyesuaikan konten atau max-width */
+  }
+
+  /* Jika hanya ada satu item di baris terakhir, pusatkan juga */
+  .fitur-lengkap .row:last-child .col:only-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Tranding Theme */
+  .container.my-5 { /* Targetkan container dengan class my-5 */
+    background-color: #f8f9fa; /* Contoh warna background abu muda, sesuaikan dengan keinginan Anda */
+    padding-top: 2rem; /* Tambahkan sedikit padding atas agar konten tidak terlalu rapat ke tepi */
+    padding-bottom: 2rem; /* Tambahkan sedikit padding bawah */
+    border-radius: 8px; /* Tambahkan sedikit sudut melengkung jika diinginkan */
+    margin-top: 3rem !important; /* Berikan margin atas yang lebih besar agar tidak terlalu dekat dengan section sebelumnya */
+    margin-bottom: 3rem !important; /* Berikan margin bawah */
+  }
+  .bg-trending-theme {
+    background-color: #f8f9fa; /* Contoh warna background */
+  }
+  .bg-trending-theme .card {
+    max-width: 250px; /* Sesuaikan lebar maksimal card */
+    margin-left: auto;
+    margin-right: auto; /* Membuat card berada di tengah kolomnya */
+  }
+
+  .bg-trending-theme .col {
+    display: flex;
+    justify-content: center; /* Memusatkan card di dalam kolom */
+  }
+
+
 }
+
+
 
 /* Tablet 768px - 991.98px */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -159,6 +250,9 @@ html, body {
     height: 25px;
     width: 25px;
   }
+  .navbar-toggler.toggled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3E%3C/svg%3E");
+    }
 
   .nav-link{
     color: white !important;
@@ -184,7 +278,47 @@ html, body {
   .cta-button:hover {
     background-color: #333;
   }
-}
+
+  /* Fitur Lengkap */
+  .fitur-lengkap .container {
+    max-width: 900px !important; /* Kita coba lebar yang lebih lebar sedikit */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Atur tata letak baris agar item berada di tengah */
+  .fitur-lengkap .row {
+    display: flex !important;
+    justify-content: center !important; /* Pusatkan item horizontal */
+    flex-wrap: wrap !important; /* Biarkan item pindah ke baris baru jika tidak cukup ruang */
+    width: 100% !important;
+  }
+
+  .fitur-lengkap .col {
+    flex: 0 0 auto !important; /* Jangan tumbuh atau menyusut secara fleksibel */
+    width: calc(50% - 30px) !important; /* Ambil setengah lebar dengan sedikit jarak */
+    margin-bottom: 1.5rem !important;
+    max-width: none !important; /* Hilangkan max-width dari aturan desktop */
+  }
+
+  /* Untuk baris terakhir (jika hanya 2 item), pastikan tetap di tengah */
+  .fitur-lengkap .row:last-child {
+    justify-content: center !important;
+  }
+
+  .fitur-lengkap .row:last-child .col {
+    width: calc(50% - 30px) !important; /* Tetap setengah lebar */
+    max-width: none !important;
+  }
+
+   /* Tranding Theme */
+   .bg-trending-theme{
+    background-color: #EEEEEE !important;
+  }
+
+} 
 
 /* Mobile <768px */
 @media (max-width: 767.98px) {
@@ -267,4 +401,41 @@ html, body {
     background-color: #333;
   }
 
+  /* wwww */
+  .fitur-box {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column; /* Mengubah arah flex menjadi kolom (vertikal) */
+    align-items: flex-start; /* Membuat ikon dan teks rata kiri */
+    gap: 0.5rem; /* Mengurangi jarak antar item menjadi 0.5rem */
+  }
+
+  .fitur-box i {
+    margin-bottom: 0.5rem !important; /* Memberikan sedikit margin bawah pada ikon */
+    margin-right: 0 !important; /* Menghapus margin kanan pada ikon */
+    font-size: 2rem !important;
+  }
+
+  .fitur-box h5 {
+    margin-bottom: 0.25rem !important;
+    font-size: 1.1rem !important; /* Sedikit menyesuaikan ukuran font h5 */
+  }
+
+  .fitur-box p {
+    margin-bottom: 0 !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Fitur Lengkap */
+  .fitur-lengkap .container{
+    padding-left: 1.8rem !important;
+    padding-right: 1.8rem !important;
+  }
+
+  /* Tranding Theme */
+  .bg-trending-theme{
+    background-color: rgba(0, 0, 0, 0.1)!important;
+  }
+
 }
+    </style>
