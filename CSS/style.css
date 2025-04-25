@@ -5,6 +5,7 @@ html, body {
   .home{
     margin-top: -150px;
     padding-bottom: 3rem;
+
   }
   
   .navbar{
@@ -21,6 +22,12 @@ html, body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+  }
+
+  h2{
+    font-family: "Mulish", sans-serif;;
+    font-size: 2.3rem;
+    font-weight: vold;
   }
   
   /* Desktop ≥992px */
@@ -77,6 +84,7 @@ html, body {
       /* margin-top: 1rem; */
       margin-bottom: 1rem;
       text-align: center;
+      font-family: 'Fjalla One';
     }
   
     .text-box p {
@@ -85,10 +93,11 @@ html, body {
       margin-top: 1rem;
       margin-bottom: 20px;
       color: rgb(49, 52, 55);
+      font-family: "Nunito", serif;
     }
   
     .cta-button {
-      padding: 0.8rem 1.5rem;
+      padding: 0.4rem;
       background-color: #000;
       color: #fff;
       border-radius: 25px;
@@ -98,14 +107,27 @@ html, body {
   
     .text-box .cta-button{
       display: inline-block;
-      margin-top: 2rem;
+      margin-top: 0.2rem;
     }
   
     .cta-button:hover {
-      background-color: #333;
+      background-color: #caa11a;
     }
-  
-    
+
+    .tombol-custom{
+      padding: 0.4rem;
+      background-color: #0024d8;
+      color: #fff;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 3rem;
+    }
+
+    .tombol-custom:hover {
+      background-color: #f9bf00;
+    }
   
     /* Keunggulan */
     .keunggulan {
@@ -182,8 +204,6 @@ html, body {
         width: 32px;
         height: 32px;
       }    
-    
-    
     }
   
   
@@ -215,6 +235,21 @@ html, body {
   
     .cta-button {
       margin-top: 1rem;
+    }
+
+    .tombol-custom{
+      padding: 0.4rem;
+      background-color: #0024d8;
+      color: #fff;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 3rem;
+    }
+
+    .tombol-custom:hover {
+      background-color: #f9bf00;
     }
   
     .navbar .container {
@@ -363,6 +398,21 @@ html, body {
       flex-direction: column;
       gap: 1rem;
       padding-top: 1rem;
+    }
+
+    .tombol-custom{
+      padding: 0.4rem;
+      background-color: #0024d8;
+      color: #fff;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 3rem;
+    }
+
+    .tombol-custom:hover {
+      background-color: #f9bf00;
     }
   
     .navbar-toggler-icon {

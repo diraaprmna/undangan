@@ -96,18 +96,33 @@
 
 /* Media query untuk layar dengan lebar maksimum 767px (ukuran layar mobile) */
 @media (max-width: 767px) {
-  .desktop-buttons {
-        display: none; /* Sembunyikan di mobile */
+    .desktop-buttons {
+        display: none;
     }
 
     .mobile-buttons {
-        display: block; /* Tampilkan di mobile */
+        display: block;
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
+    .hero .container .input-group { /* Lebih spesifik */
+        width: 100% !important; /* Paksa dengan !important (gunakan dengan hati-hati) */
+        justify-content: center;
+    }
+
+     .form-control { /* Lebih spesifik */
+        flex-grow: 0.5 !important;
+        flex-basis: 50% !important;
+    }
+
+    .hero .container .input-group .btn-primary { /* Lebih spesifik */
+        background-color: #007bff;
+    }
 }
+
+
 
   </style>
     
@@ -152,15 +167,15 @@
 
     <!-- hero -->
     <div class="hero">
-      <div class="container">
-          <h1>Tema Undangan Digital</h1>
-          <p class="lead">Temukan tema undangan digital yang Anda cari.</p>
-          <div class="input-group mb-3 w-50 mx-auto">
-              <input type="text" class="form-control" placeholder="Cari Tema: Contoh, Syari, Biru, Tanpa Foto" aria-label="Cari Tema">
-              <button class="btn btn-primary" type="button">Cari</button>
-          </div>
-      </div>
-  </div>
+        <div class="container">
+            <h1>Tema Undangan Digital</h1>
+            <p class="lead">Temukan tema undangan digital yang Anda cari.</p>
+            <div class="input-group mb-3 w-50 mx-auto w-md-100">
+                <input type="text" class="form-control" placeholder="Cari Tema: Contoh, Syari, Biru, Tanpa Foto" aria-label="Cari Tema">
+                <button class="btn btn-primary" type="button">Cari</button>
+            </div>
+        </div>
+    </div>
 
   <!-- Kategori -->
   <div class="kategori py-5">
@@ -187,7 +202,7 @@
     </div>
 </div>
 
-
+<!-- isi -->
 <hr class="w-50 mx-auto my-2" />
 
 <div class="py-4">
@@ -707,6 +722,29 @@
    </div>
 </div>
 
+  <!-- Footer -->
+  <footer class="bg-info bg-opacity-12 py-3 ">
+    <div class="container text-center">
+      <h6 class="fw-semibold text-muted mb-2">dcreative web undangan</h6>
+      
+      <div class=" d-flex justify-content-center align-items-center icon-footer">
+        <a href="https://www.instagram.com/diraprmna_/" target="_blank" class="me-5">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 28px; height: 28px; display: block;">
+        </a>
+        <a href="https://www.facebook.com/dirapermna.cboedakmns" target="_blank" class="me-5">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 28px; height: 28px; display: block;">
+        </a>
+        <a href="https://wa.me/6283143235772" target="_blank" >
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 28px; height: 28px; display: block;">
+        </a>
+      </div>
+  
+      <hr class="w-50 mx-auto my-2" />
+  
+      <p class="text-light small mb-0">&copy; 2025 dcreative.webinvite — All rights reserved.</p>
+    </div>
+  </footer>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-button');
@@ -740,7 +778,6 @@
         });
     });
 });
-
 </script>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
